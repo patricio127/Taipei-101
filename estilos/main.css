@@ -1,0 +1,544 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    min-width: 900px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h1 {
+    font-size: 48px;
+}
+h1, h2 {
+    text-align: center;
+    padding-top: 60px;
+}
+h2 {
+    font-size: 40px;
+}
+h1:after, h2:after {
+    border-bottom-width: 2px;
+    border-color: #da0909;
+    content: "";
+    width: 70px;
+    margin: auto;
+    display: block;
+    border-bottom-style: solid;
+    margin-top: 12px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+div#contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-image: url(../img/taipei.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    background-position: center;
+    color: #fff;
+    padding: 20px;
+}
+header ul {
+    list-style-type: none;
+    font-size: 20px;
+}
+header ul li{
+    display: inline-block;
+    line-height: 80px;
+    width: 190px;
+    text-shadow: 1px 1px 2px black;;
+    text-align: center;
+    font-weight: 500;
+}
+header ul li:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+header ul li.actual {
+    background-color: rgb(242, 242, 242, .2);
+}
+header ul li.actual:hover {
+    transform: none;
+    transition: none;
+}
+header ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+header #logo {
+    width: 256px;
+    height: 84px;
+    background-image: url("../iconos/LOGO.png");
+    background-size: cover;
+    font-size: 0;
+}
+.gracias header {
+    height: 400px;
+}
+.gracias h1:after, .gracias h2:after {
+    content: none;
+}
+.gracias main h2 {
+    font-size: 30px;
+    padding: 10px;
+}
+.gracias main section img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+}
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 2;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    border-bottom: 1px solid #BFBEBD;
+}
+nav ul li {
+    width: 25%;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+nav ul li:hover {
+    transform: scale(1.07);
+    transition: transform 0.1s;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;  
+    font-weight: bolder;
+}
+nav ul li a:hover, nav ul li.activo a {
+    color:  #A6A6A6;
+}
+nav ul li.activo:hover {
+    transform: none;
+    transition: none;
+}
+#ir-arriba {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+#ir-arriba img {
+    width: 50px;
+    height: 50px;
+    background-color: #da0909;
+    border-radius: 25px;
+}
+#ir-arriba img:hover {
+    background-color: #f04848;
+    border-radius: 25px;
+}
+#inicio h2 {
+    display: none;
+}
+#inicio p, #inicio h3 {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+#inicio > p {
+    font-size: 20px;
+    line-height: 2;
+    margin-bottom: 36px;
+}
+#inicio h3 {
+    margin-top: 24px;
+}
+#destacar figure {
+    max-width: 290px;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+#destacar a {
+    text-decoration: none;
+}
+#destacar a figure:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+}
+#destacar figure img {
+    width: 295px;
+    height: 343px;
+}
+#destacar figure .swiper-container .swiper-pagination .bullet-blanco {
+    background-color: #fff;
+    opacity: 80%;
+}
+#destacar figure figcaption {
+    position: absolute;
+    bottom: 30px;
+    padding-left: 20px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 1;
+}
+#restaurantes div {
+    background-image: url(../img/comida.jpg);
+    padding-left: 20px;
+    height: 500px;
+    width: 350px;
+    background-size: contain;
+}
+#restaurantes div, #restaurantes ul {
+    display: inline-block;
+    vertical-align: top;
+}
+#restaurantes ul {
+    list-style: none;
+    width: 390px;
+}
+#restaurantes ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+#restaurantes ul li:hover {
+    transform: translateX(1.25rem);
+    transition: transform 0.4s;
+    transition-timing-function: ease 0.4s ;
+}
+#restaurantes ul li:first-child {
+    border-top: 1px solid #f0f3f6;
+}
+#restaurantes ul li {
+    border-bottom: 1px solid #f0f3f6;
+}
+#restaurantes ul li a p:last-child {
+    color: #BFBEBD;
+}
+#videos iframe {
+    display: block;
+    margin: auto;
+    padding-top: 50px;
+    border: none;
+}
+footer {
+    max-width: 1250px;
+    margin: 50px auto 0;
+    padding: 30px;
+    border-top: 1px solid #BFBEBD;
+}
+footer h2 {
+    font-size: 0;
+    padding: 0;
+}
+footer h2:after {
+    border: none;
+    content: none;
+}
+footer p {
+    text-align: center;
+}
+#autor {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+#autor li h3 {
+    border-left: 8px solid #BFBEBD;
+    padding-left: 10px;
+}
+#iconos a {
+    display: inline-block;
+    margin-right: 20px;
+}
+#iconos a:hover {
+    transform: scale(1.07);
+    transition: transform 0.2s;
+}
+#iconos div {
+    background-color: #000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background-image: url(../iconos/redessociales.png);
+    background-repeat: no-repeat;
+    background-position-y: 0;
+}
+#iconos a:first-of-type div {
+    background-position-x: 0;
+}
+#iconos a:nth-of-type(2) div {
+    background-position-x: -40px;
+}
+#iconos a:last-of-type div {
+    background-position-x: -80px;
+}
+#iconos div img {
+    max-height: 60%;
+    max-width: 60%; 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.iconos{
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.iconos article > div, .iconos section > div{
+    display: block;
+    margin: 100px auto 0;
+    width: 75px;
+    height: 75px;
+}
+.iconos article > div {
+    background-image: url(../iconos/iconos-itinerario.png);
+    background-position-y: 0;
+}
+.iconos article#lohas div {
+    background-position-x: 0;
+}
+.iconos article#tour div {
+    background-position-x: -75px;
+}
+.iconos article#ecoturismo div {
+    background-position-x: -150px;
+}
+.iconos article#mercado div {
+    background-position-x: -225px;
+}
+.iconos article#termas div {
+    background-position-x: -300px;
+}
+.iconos section div{
+    background-image: url(../iconos/calendario.png);
+}
+.iconos h2{
+    margin-top: 24px;
+    padding: 0;
+}
+.iconos p{
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+.iconos figure {
+    display: inline-block;
+}
+.iconos figure img{
+    width: 96%;
+    height: 96%;
+    border-radius: 50%;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+}
+.iconos figure img:hover {
+    transform: scale(1.07);
+    transition: transform 0.2s;
+}
+.iconos figure figcaption {
+    text-align: center;
+    font-size: 20px;
+    width: 202px;
+}
+section .iconos:last-child {
+    max-width: 1200px;
+}
+table tr th{
+    background-color: #F24968;
+    color: #fff;
+    padding: 20px;
+    font-size: 15px;
+    text-transform: uppercase;
+    min-width: 110px;
+}
+table tr td {
+    padding: 10px;
+    font-size: 14px;
+}
+table tr td a{
+    text-decoration: none;
+    color: inherit;
+}
+table tr.gris:hover, table tr.blanco:hover {
+    transform: scale(1.01);
+    transition: transform 0.2s;
+}
+table tr.gris, table tr.blanco {
+    cursor: pointer;
+}
+table .gris {
+    background-color: #BFBEBD;
+}
+table .blanco {
+    background-color: #F2F2F2;
+}
+#eventos {
+    width: 1200px;
+}
+.evento {
+    display: block;
+    padding: 20px;
+    border-top: 1px #c8c8c8 solid;
+}
+.evento img {
+    width: 400px;
+    display: inline-block;
+}
+.evento > div {
+    width: 700px;
+    margin: 0;
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: top;
+}
+.evento > div > p:first-of-type {
+    color: orangered;
+}
+.evento .leer-mas p, .evento .leer-mas a:last-child{
+    display: none;
+}
+.evento .leer-mas.visible p, .evento .leer-mas.visible a:last-child {
+    display: block;
+}
+.evento .leer-mas.visible a:first-child {
+    display: none;
+}
+.evento .leer-mas a {
+    text-decoration: none;
+    color: orange;
+    font-weight: bolder;
+}
+.evento .leer-mas a:hover {
+    color: orangered;
+}
+input[type=text], input[type=date], input[type=number], select, textarea {
+    border: none;
+    border-bottom: 2px solid #999999;
+}
+input[type=text]:focus, input[type=date]:focus, input[type=number]:focus, select:focus, textarea:focus {
+    border-bottom-color: #444444;
+}
+#formulario{
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#formulario a > img {
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+#formulario h2{
+    margin-top: 24px;
+}
+form {
+    max-width: 750px;
+    background-color: #fff;
+    box-shadow: 0 0 20px #BFBEBD;
+    display: block;
+    margin: auto;
+    padding-bottom: 30px;
+}
+form div label {
+    padding-left: 41px;
+    margin: 0;
+    display: block;
+}
+form div label:last-child {
+    display: inline-block;
+    line-height: 40px;
+    padding-left: 10px;
+}
+input, textarea, select {
+    outline: none;
+}
+#formulario.enviado input:required:invalid,
+#formulario.enviado input:focus:invalid, 
+#formulario.enviado select:required:invalid,
+#formulario.enviado select:focus:invalid {
+    border-color: red;
+}
+#nombre-completo label {
+    padding-left: 41px;
+    padding-top: 30px;
+    margin: 0;
+}
+input, select {
+    width: 300px;
+    height: 30px;
+    margin: 10px 0 30px 40px;
+}
+input[type=checkbox] {
+    width: auto;
+    vertical-align: middle;
+    margin: 0 0 0 40px;
+}
+textarea {
+    resize: none;
+    width: 500px;
+    height: 100px;
+    margin: 10px 0 30px 40px;
+}
+#boton {
+    margin-top: 40px;
+}
+#boton input{
+    width: 200px;
+    height: 40px;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #da0909;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+}
+#boton input:hover {
+    background-color: #f04848;
+}
+.destacados section {
+    width: 800px;
+    margin: auto;
+}
+.destacados section h2:after {
+    content: none;
+}
+.destacados section p {
+    font-size: 19px;
+    line-height: 30px;
+}
+@media (max-width:767px) {
+    header {
+        display: block;
+        padding: 10px;
+        height: 400px;
+    }
+    header img, header ul li {
+        display: block;
+        margin: 0 auto;
+    }
+}

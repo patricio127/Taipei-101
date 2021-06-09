@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Eventos</title>
+        <link rel="stylesheet" href="estilos/main.css"/>
+        <link rel="shortcut icon" href="iconos/apple-icon-precomposed.png" type="image/x-icon"/>
+        <script>
+            function irATitulo(id) {
+                location.href= id;
+            }
+            function leerMas(event) {
+                event.preventDefault();
+                event.target.parentElement.classList.add('visible');
+            }
+            function leerMenos(event) {
+                event.preventDefault();
+                event.target.parentElement.classList.remove('visible');
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><div id="logo">Taipei</div></a>
+            <ul>
+                <li><a href="itinerario.html">ITINERARIO</a></li>
+                <li class="actual"><a href="eventos.html">EVENTOS</a></li>
+                <li><a href="formulario.html">RESERVAR</a></li>
+            </ul>
+            <a href="#" id="ir-arriba"><img src="iconos/top.png" alt="Ir arriba"></a>
+        </header>
+        <main>
+            <div id="contenedor">
+                <div class="iconos">
+                    <section>
+                        <div></div>
+                        <h1>Eventos de turismo de Taiwán</h1>
+                        <table>
+                            <tr>
+                                <th>Nombre del evento</th>
+                                <th>Fecha</th>
+                                <th>Patrocinador</th>
+                                <th>Disponibilidad</th>
+                            </tr>
+                            <tr class="gris" onclick="irATitulo('#termas')">
+                                <td><a href="#termas">Termas de Taiwán y Carnaval de alta cocina</a></td>
+                                <td>24/10/19 - 30/06/20</td>
+                                <td>Oficina de Turismo, <abbr title="Oficina de Ministerio de Transporte y Comunicación">MOTC</abbr></td>
+                                <td>Disponible</td>
+                            </tr>
+                            <tr class="blanco" onclick="irATitulo('#festival1')">
+                                <td><a href="#festival1">Festival Internacional de Arte</a></td>
+                                <td>30/05/20 - 30/09/20</td>
+                                <td><abbr title="Administración del Área Escénica Nacional">AAEN</abbr> de la Costa Este</td>
+                                <td>Disponible</td>
+                            </tr>
+                            <tr class="gris" onclick="irATitulo('#festival2')">
+                                <td><a href="#festival2">Festival Cultural Baosheng 2020</a></td>
+                                <td>28/03/20 - 28/06/20</td>
+                                <td>Templo Taipei Baoan</td>
+                                <td>Disponible</td>
+                            </tr>
+                            <tr class="blanco" onclick="irATitulo('#visita')">
+                                <td><a href="#visita">Visita nocturna a la cabeza de la reina</a></td>
+                                <td>Suspendido</td>
+                                <td>AAEN de la Costa Norte y Guanyinshan</td>
+                                <td>Suspendido temporalmente</td>
+                            </tr>
+                            <tr class="gris" onclick="irATitulo('#concierto')">
+                                <td><a href="#concierto">Festival de Rock Gongliao HO-HAI-YAN 2020</a></td>
+                                <td>Suspendido</td>
+                                <td>Nuevo gobierno de la ciudad de Taipei</td>
+                                <td>Suspendido temporalmente</td>
+                            </tr>
+                            <tr class="blanco" onclick="irATitulo('#ciclismo')">
+                                <td><a href="#ciclismo">Festival de ciclismo de Taiwán 2020</a></td>
+                                <td>01/06/20 - 31/12/20</td>
+                                <td>Oficina de Turismo, MOTC</td>
+                                <td>Disponible</td>
+                            </tr>
+                            <tr class="gris" onclick="irATitulo('#formosa')">
+                                <td><a href="#formosa">Festival de verano de Formosa 2020</a></td>
+                                <td>Suspendido</td>
+                                <td>Oficina de Turismo, MOTC</td>
+                                <td>Suspendido temporalmente</td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
+                <div id="eventos">
+                    <h2>Detalle de los eventos</h2>
+                    <article class="evento" id="termas">
+                        <img src="img/termas.jpg" alt="Termas"/>
+                        <div>
+                            <h3>Termas de Taiwán y Carnaval de alta cocina</h3>
+                            <p>2019-10-24 ~ 2020-06-30</p>
+                            <p>¡La llegada gradual del invierno anuncia formalmente que la temporada alta de <strong>aguas termales</strong> de Taiwán ha comenzado! Taiwán abunda en los regalos de la naturaleza: manantiales fríos, aguas termales, manantiales de barro, manantiales submarinos, es un lugar pintoresco de fama mundial para <strong>manantiales de todas las variedades</strong>.</p> 
+                            <div class="leer-mas">
+                                <a href="#" onclick="leerMas(event)">Leer más</a>
+                                <p>A partir de 2007, la Oficina de Turismo, el Ministerio de Transporte y Comunicación combinaron dos recursos turísticos: los aspectos sanitarios únicos de las aguas termales y la demanda de una dieta moderna y saludable, para integrar las "aguas termales" y la "cocina gourmet" de Taiwán. planean lanzar un "Carnaval de la cocina de aguas termales de Taiwán". Este evento ocupa un lugar central en todo Taiwán al mismo tiempo cada año, con una de las 17 áreas de aguas termales de Taiwán elegidas como la ubicación inicial del año. El Carnaval no solo es una oportunidad para que los turistas taiwaneses disfruten de los placeres de las aguas termales en todo el país y reciban descuentos en productos, los turistas extranjeros también están fascinados y atraídos, y el Carnaval es una fuerza impulsora detrás de las aguas termales anuales de otoño / invierno de Taiwán. auge turístico Durante este período, las áreas de aguas termales en todo el país organizan una serie de eventos de aguas termales / gastronomía y reúnen a cientos de empresas municipales y del condado, presentando la belleza escénica de los manantiales, el paisaje cultural local y productos especiales.</p>
+                                <a href="#" onclick="leerMenos(event)">Leer menos</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="evento" id="festival1">
+                        <img src="img/festival.jpg" alt="Festival"/>
+                        <div>
+                            <h3>Festival Internacional de Arte de Esculturas de Arena Fulong 2020</h3>
+                            <p>2020-05-30 ~ 2020-09-30</p>
+                            <p>Utilizando las arenas doradas de la playa de Fulong, los artistas en el <strong>festival</strong> 2020-2021 ilustrarán Taiwán y las montañas y giras en bicicleta del mundo. Los artistas irán a muchas escuelas en el país para enseñar a los estudiantes a hacer <strong>esculturas de arena</strong>, y se llevará a cabo una competencia internacional y una competencia nacional. El festival sirve como un escenario en el que los nuevos artistas de arena pueden expresar plenamente sus capacidades.</p>
+                        </div>  
+                    </article>
+                    <article class="evento" id="festival2"> 
+                        <img src="img/festival2.jpg" alt="Festival Cultural"/>  
+                        <div>
+                            <h3>Festival Cultural Baosheng 2020</h3>
+                            <p>2020-03-28 ~ 2020-06-28</p>
+                            <p>El área de Dalongdong, que se formó hace unos dos siglos, es uno de los pocos <strong>barrios históricos</strong> bien conservados de la ciudad de Taipei, conocido por sus numerosas viviendas pintorescas y estructuras religiosas que rodean el Templo Bao'an. El templo <em>Dalongdong Bao'an</em> es, con mucho, <strong>el más popular</strong> entre los 300 templos de Taiwán dedicados al emperador Baosheng, según el folclorista Lin Heng-dao.</p>
+                            <div class="leer-mas">
+                                <a href="#" onclick="leerMas(event)">Leer más</a>
+                                <p>Luchando por cumplir su compromiso de mantener viva una religión de base, creando una visión antigua y nueva y un ciclo de "nueva cultura", e innovando sobre la base de la tradición, el palaciego Templo Dalongdong Bao'an, junto con sus decoraciones ornamentadas. y diseño espacial, representa el pensamiento y los métodos poco convencionales con respecto a la estética tridimensional que le valió elogios internacionales, como los Premios de la <abbr title="La Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura">UNESCO</abbr> Asia-Pacífico Patrimonio para la Conservación del Patrimonio Cultural en 2003. El Templo es famoso por albergar el Festival Cultural Baosheng anual, un símbolo de las celebraciones religiosas populares de Taiwán , legados arquitectónicos y esfuerzos de revitalización del patrimonio, y ha atraído a lugareños y visitantes por igual durante dos décadas. Desde abril hasta junio, el festival no solo ha iluminado una base de participantes cada vez mayor sobre las diferentes facetas de la estética religiosa del país y los cambios en los rituales relevantes, sino que también, a pesar de su visión ortodoxa de la espiritualidad de Formosa, se ha convertido en una influencia cultural a nivel mundial. importante atracción turística que inspiró festividades similares en China y Singapur.</p>
+                                <a href="#" onclick="leerMenos(event)">Leer menos</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="evento" id="visita">
+                        <img src="img/visita.jpg" alt="Visita nocturna"/>
+                        <div>
+                            <h3>2020 Times of Rocks en Yehliu: una visita nocturna a la cabeza de la reina</h3>
+                            <p>Este evento ha sido pospuesto indefinidamente hasta nuevo aviso.</p>
+                            <p>Yehliu Geopark está abierto a visitas nocturnas ahora, y esto lo hace realmente único. <em>"Time of Rocks in Yehliu"</em> utiliza <strong>luz colorida y música</strong> para resaltar las <strong>rocas de hongos</strong> del área. Los visitantes pueden esperar disfrutar de una experiencia imborrable en el parque.</p>
+                        </div>
+                    </article>
+                    <article class="evento" id="concierto">
+                        <img src="img/concierto.jpg" alt="concierto"/>
+                        <div>
+                            <h3>Festival de Rock Gongliao HO-HAI-YAN 2020</h3>
+                            <p>Esta actividad se suspendió temporalmente en 2020.</p>
+                            <p>El <em>Festival de Rock Gongliao de HO-HAI-YAN</em> es uno de los eventos costeros anuales más famosos de la temporada de verano de la ciudad de Nueva Taipei. Este evento no solo ha integrado con éxito el entorno marino con el espíritu creativo de la música independiente, para crear una característica distintiva del Cabo Nororiental y un beneficio importante para el turismo, sino que también ha proporcionado un escenario para artistas musicales no convencionales.</p>
+                            <div class="leer-mas">
+                                <a href="#" onclick="leerMas(event)">Leer más</a>
+                                <p>Creó una ventaja para comercializar el turismo internacional en Taiwán. El Festival se celebra cada año en julio con el objetivo de proporcionar a los jóvenes entusiastas un gran lugar para ir durante el período de vacaciones de verano. Al mismo tiempo, también levanta el telón para viajar durante toda la temporada de verano para la costa de la costa noreste de la ciudad de Nueva Taipei. El tema del Festival es "Apreciando la música indie en el océano", una competencia entre grupos de música indie, y se centra en las actuaciones de grupos musicales creativos taiwaneses y extranjeros. Las brillantes actuaciones de los grupos de música y el entusiasmo de las multitudes crean una "reacción química", otro "punto de venta" de este evento culminante. Este verano, libera tu alma con música, déjate llevar y únete a otros entusiastas de la música "borrachos de música", deja que HO-HAI-YAN Gongliao Rock Festival encienda tu larga energía acumulada, abre tus brazos y da la bienvenida a este "sagrado" Clásico anual de rock & roll.</p>
+                                <a href="#" onclick="leerMenos(event)">Leer menos</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="evento" id="ciclismo">  
+                        <img src="img/ciclismo.jpg" alt="Ciclismo"/> 
+                        <div>   
+                            <h3>Festival de ciclismo de Taiwán 2020</h3>
+                            <p>2020-06-01 ~ 2020-12-31</p>
+                            <p>Desde 2010, la Oficina de Turismo ha llevado a cabo activamente una serie de eventos relacionados con el <strong>Festival de Ciclismo de Taiwán</strong>, invitando con entusiasmo al público de Taiwán a colocar sus huellas de "neumáticos" y convertir los resultados de la innovación en la construcción del transporte en un nuevo recurso para el turismo, con el objetivo convertir a Taiwán en un paraíso de nivel internacional para el ciclismo de ocio.</p> 
+                            <div class="leer-mas">
+                                <a href="#" onclick="leerMas(event)">Leer más</a>
+                                <p>Taiwán tiene un excelente sistema de autopistas además de una topografía superior para que al andar en bicicleta, un ciclista también pueda apreciar un magnífico paisaje a lo largo de la ruta, ¡y lo que tiene es un recorrido en bicicleta por la isla que cuenta con un itinerario conveniente y agradable! La serie de actividades del "Festival de Ciclismo de Taiwán" se centra en el cicloturismo y reúne los recursos turísticos y de transporte de los diversos asientos del condado para presentar los detalles de una cultura de turismo local diversa. Acompañados de hermosas montañas y paisajes acuáticos, los entusiastas de la bicicleta de todo el mundo pueden peregrinar y disfrutar de una variada y rica experiencia de ciclismo recreativo, lo que hace que montar el "caballo de hierro" ya no sea un simple ejercicio, sino la experiencia perfecta en cuerpo y alma.</p>
+                                <a href="#" onclick="leerMenos(event)">Leer menos</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="evento" id="formosa">
+                        <img src="img/formosa.jpg" alt="Formosa"/>
+                        <div>
+                            <h3>Festival de verano de Formosa 2020</h3>
+                            <p>Esta actividad se suspendió temporalmente en 2020.</p>
+                            <p>Celebrado en la temporada alta de viajes en Taiwán, el Festival de Verano de Formosa presenta las mejores características de verano de Taiwán a la vez. Su serie de <strong>coloridos eventos</strong> ha atraído a muchos visitantes nacionales y extranjeros a explorar los <strong>hermosos paisajes</strong> y la <strong>deliciosa comida</strong> de Taiwan, sumergiéndose en el encanto veraniego del país.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </main>    
+        <footer>
+            <h2>Autor</h2>
+            <ul id="autor">
+                <li>
+                    <h3>Nombre</h3> 
+                    <p>Patricio HUANG</p>
+                </li>
+                <li>
+                    <h3>Nombre de la materia</h3> 
+                    <p>Maquetado y Desarrollo Web</p>
+                </li>
+                <li>
+                    <h3>Docente a cargo</h3> 
+                    <p>Jonatan Gabriel JORGE</p>
+                </li>
+                <li id="iconos">
+                    <h3>Contactanos</h3>
+                    <a href="https://twitter.com/explore" target="_blank">
+                        <div></div>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <div></div>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <div></div>
+                    </a>
+                </li>
+            </ul>
+            <p>Este sitio es una entrega para un <abbr title="Trabajo Practico">TP</abbr> de primer cuatrimestre de la Escuela Da Vinci año 2020</p>  
+        </footer>
+    </body>
+</html>

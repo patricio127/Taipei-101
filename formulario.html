@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Formulario</title>
+        <link rel="stylesheet" href="estilos/main.css"/>
+        <link rel="shortcut icon" href="iconos/apple-icon-precomposed.png" type="image/x-icon"/>
+        <script>
+            function submitClick() {
+                document.getElementById('formulario').classList.add('enviado');
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><div id="logo">Taipei</div></a>
+            <ul>
+                <li><a href="itinerario.html">ITINERARIO</a></li>
+                <li><a href="eventos.html">EVENTOS</a></li>
+                <li class="actual"><a href="formulario.html">RESERVAR</a></li>
+            </ul>
+            <a href="#" id="ir-arriba"><img src="iconos/top.png" alt="Ir arriba"></a>
+        </header>
+        <main>
+            <div id="formulario">
+                <h1>Reserve su tour guiado</h1>
+                <form method="POST" action="gracias.html" enctype="multipart/form-data">
+                    <div id="nombre-completo">
+                        <label for="Nombre">Nombre completo</label>
+                        <input type="text" placeholder="Nombre" name="Nombre" id="Nombre" required/>
+                        <input type="text" placeholder="Apellido" name="Apellido" id="Apellido" required/>
+                    </div>
+                    <div>
+                        <label for="genero">Genero</label>
+                        <select id="genero" name="genero" required>
+                            <option value="" disabled selected>Seleccione</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="Celular">Celular</label>
+                        <input type="text" placeholder="+54 11 1234 1234" id="Celular" name="Celular"/>
+                    </div>
+                    <div>
+                        <label for="Mail">Mail</label>
+                        <input type="text" placeholder="nombre@ejemplo.com" name="Mail" id="Mail" required/>
+                    </div>
+                    <div>
+                        <label for="CantidadDePersonas">Cantidad de personas</label>
+                        <input type="number" name="CantidadDePersonas" value="1" min="1" max="20" id="CantidadDePersonas"/>
+                    </div>
+                    <div>
+                        <label for="FechaTour">Fecha del tour</label>
+                        <input type="date" name="FechaTour" id="FechaTour" required/>
+                    </div>
+                    <div>
+                        <label for="Archivo">Adjunte pasaporte o documento de identidad</label>
+                        <input type="file" name="Archivo" accept="image/png, image/jpeg, image/bmp, application/pdf" id="Archivo" required>
+                    </div>
+                    <div>
+                        <label for="Comentarios">Comentarios</label>
+                        <textarea name="Comentarios" placeholder="Agregue cualquier información que le parezca útil" id="Comentarios" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="acepta-mail" value="acepta-mail" id="acepta-mail">
+                        <label for="acepta-mail">Quiero recibir novedades en mi correo electrónico</label>
+                    </div>
+                    <div id="boton">
+                        <input type="submit" onclick="submitClick()"/>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <h2>Autor</h2>
+            <ul id="autor">
+                <li>
+                    <h3>Nombre</h3> 
+                    <p>Patricio HUANG</p>
+                </li>
+                <li>
+                    <h3>Nombre de la materia</h3> 
+                    <p>Maquetado y Desarrollo Web</p>
+                </li>
+                <li>
+                    <h3>Docente a cargo</h3> 
+                    <p>Jonatan Gabriel JORGE</p>
+                </li>
+                <li id="iconos">
+                    <h3>Contactanos</h3>
+                    <a href="https://twitter.com/explore" target="_blank">
+                        <div></div>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <div></div>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <div></div>
+                    </a>
+                </li>
+            </ul>
+            <p>Este sitio es una entrega para un <abbr title="Trabajo Practico">TP</abbr> de primer cuatrimestre de la Escuela Da Vinci año 2020</p>  
+        </footer>
+    </body>
+</html>
